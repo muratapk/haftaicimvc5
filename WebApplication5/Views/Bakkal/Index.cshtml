@@ -1,0 +1,28 @@
+﻿@model List<WebApplication5.Models.musteri>
+@{
+    ViewBag.Title = "Index";
+}
+@Html.Partial("_mesajpartial")
+<h2>Index</h2>
+<a class="btn btn-secondary" href="/Bakkal/Create">Yeni Kayıt</a>
+<table class="table table-striped">
+    <tr class="table-primary">
+        <td>Müşteri Adı</td>
+        <td>Müşteri Adres</td>
+        <td>Müşteri Kullanıcı Adı</td>
+        <td>Müşteri Şifresi</td>
+        <td>Düzelt</td>
+        <td>Silme</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.musteri_adi</td>
+            <td>@item.musteri_adres</td>
+            <td>@item.musteri_kul</td>
+            <td>@item.musteri_sifre</td>
+            <td><a class="btn btn-warning" href="/Bakkal/Edit/@item.musteri_Id">Düzelt</a></td>
+            <td><a class="btn btn-danger" href="/Bakkal/Delete/@item.musteri_Id">Silme</a></td>
+        </tr>
+    }
+</table>

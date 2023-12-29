@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<form method="post" action="Delete">
+    <input type="hidden" name="musteri_Id" value="@Model.musteri_Id" />
+    <div class="form-group row">
+        <label for="musteri_adi" class="col-4 col-form-label">Müsteri Adı</label>
+        <div class="col-8">
+            <input id="musteri_adi" disabled value="@Model.musteri_adi" name="musteri_adi" type="text" class="form-control">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="musteri_adres" class="col-4 col-form-label">Müsteri Adresi</label>
+        <div class="col-8">
+            <input id="musteri_adres" disabled value="@Model.musteri_adres" name="musteri_adres" type="text" class="form-control">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="musteri_kul" class="col-4 col-form-label">Müsteri Kullanıcı Adı</label>
+        <div class="col-8">
+            <input id="musteri_kul" disabled value="@Model.musteri_kul" name="musteri_kul" type="text" class="form-control">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="musteri_sifresi" class="col-4 col-form-label">Müşteri Şifresi</label>
+        <div class="col-8">
+            <input id="musteri_sifresi" disabled value="@Model.musteri_sifre" name="musteri_sifre" type="text" class="form-control">
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="offset-4 col-8">
+            <button name="submit" type="submit" class="btn btn-primary">Kayıt Sil</button>
+            <a class="btn btn-warning" href="/Bakkal/Index">İptal</a>
+        </div>
+    </div>
+</form>
