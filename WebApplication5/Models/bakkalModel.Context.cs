@@ -26,5 +26,6 @@ namespace WebApplication5.Models
         }
     
         public DbSet<musteri> musteri { get; set; }
+        public DbSet<Resimler> Resimler { get; set; }
     }
 }

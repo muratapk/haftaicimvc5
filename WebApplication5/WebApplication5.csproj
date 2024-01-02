@@ -129,6 +129,7 @@
     <Compile Include="Controllers\BakkalController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ResimController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -148,6 +149,9 @@
       <DependentUpon>bakkalModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\musteri.cs">
+      <DependentUpon>bakkalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Resimler.cs">
       <DependentUpon>bakkalModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -226,9 +230,12 @@
     <Content Include="Views\Bakkal\Delete.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Shared\_mesajpartial.cshtml" />
+    <Content Include="Views\Resim\Index.cshtml" />
+    <Content Include="Views\Resim\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Musteri_Resim\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

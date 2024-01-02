@@ -1,0 +1,28 @@
+﻿@model List<WebApplication5.Models.Resimler>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<a class="btn btn-secondary" href="/Resim/Create">Yeni Kayıt</a>
+<table class="table table-striped">
+    <tr class="table-primary">
+        <td>Müşteri Adı</td>
+        <td>Resim</td>
+       
+        <td>Düzelt</td>
+        <td>Silme</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Musteri_Id</td>
+            <td>@item.Resim_Ad 
+            <img src="~/Musteri_Resim/@item.Resim_Ad" height="100" width="100"/>
+            </td>
+            
+            <td><a class="btn btn-warning" href="/Resim/Edit/@item.Resim_Id">Düzelt</a></td>
+            <td><a class="btn btn-danger" href="/Resim/Delete/@item.Resim_Id">Silme</a></td>
+        </tr>
+    }
+</table>

@@ -12,12 +12,10 @@ namespace WebApplication5.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class musteri
+    public partial class Resimler
     {
-        public int musteri_Id { get; set; }
-        public string musteri_adi { get; set; }
-        public string musteri_adres { get; set; }
-        public string musteri_kul { get; set; }
-        public string musteri_sifre { get; set; }
+        public int Resim_Id { get; set; }
+        public string Resim_Ad { get; set; }
+        public Nullable<int> Musteri_Id { get; set; }
     }
 }
